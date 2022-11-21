@@ -1,0 +1,9 @@
+#Configuracion del mapeo
+App\Entity\Juguete:
+  attributes:
+    id:
+      groups: ['get_juguete']
+    nombre:
+      groups: ['get_juguete', 'juguete']
+    marca:
+      groups: ['get_juguete', 'juguete']

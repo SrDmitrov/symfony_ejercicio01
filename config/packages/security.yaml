@@ -25,18 +25,10 @@ security:
     access_control:
         #- { path: ^/admin, roles: ROLE_ADMIN }
         #- { path: ^/profile, roles: ROLE_USER }
-        - { path: ^/api/login_check, roles: PUBLIC_ACCESS } #Permitirá entrar al login
-        - { path: ^/api/user, roles: PUBLIC_ACCESS } #Permitirá registrar un User
-        - { path: ^/api, roles: IS_AUTHENTICATED_FULLY } #Si se comenta se desactiva la seguridad. Recomendable comentar esta línea para hacer debug
+#        - { path: ^/api/login_check, roles: PUBLIC_ACCESS } #Permitirá entrar al login
+#        - { path: ^/api/user, roles: PUBLIC_ACCESS } #Permitirá registrar un User
+#        - { path: ^/api, roles: IS_AUTHENTICATED_FULLY } #Si se comenta se desactiva la seguridad. Recomendable comentar esta línea para hacer debug
         #- { path: ^/api/restaurante, roles: ROLE_RESTAURANTE }
-
-    #Jerarquía de roles
-    role_hierarchy:
-        #Aqui se especifican a qué roles pueden acceder qué roles (definidos en User.php). La jerarquia es ascendente
-        #"Lo naranja referencia las constantes de User.php"
-        ROLE_CLIENTE: ROLE_USER #ROLE_CLIENTE tiene los mismos permisos que el usuario "por defecto"
-        ROLE_RESTAURANTE: ROLE_USER
-        ROLE_ADMIN : [ROLE_USER, ROLE_CLIENTE, ROLE_RESTAURANTE] #ROLE_ADMIN puede acceder a lo mismo que los demás juntos
 
     #REEMPLAZADO HASTA AQUI
 

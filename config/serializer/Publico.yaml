@@ -1,0 +1,9 @@
+#Configuracion del mapeo
+App\Entity\Publico:
+  attributes:
+    id:
+      groups: ['get_publico']
+    nombre:
+      groups: ['get_publico']
+    descripcion:
+      groups: ['get_publico']
