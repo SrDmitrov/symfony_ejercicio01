@@ -17,6 +17,17 @@ framework:
     php_errors:
         log: true
 
+    #CONFIGURACION SERIALIZER
+    serializer:
+        enabled: true
+        mapping:
+            paths: [ '%kernel.project_dir%/config/serializer/' ]
+    #ESTO CORRIGE ERROR DE csrf_token
+    form:
+        csrf_protection:
+            enabled: false
+
+
 when@test:
     framework:
         test: true
